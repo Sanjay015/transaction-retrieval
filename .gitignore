@@ -1,3 +1,7 @@
 .idea/
 *.pyc
 *.sqlite3
+*.pdf
+*.log
+*.pdf
+data/
