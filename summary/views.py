@@ -70,11 +70,11 @@ def transaction_summary(request, transaction_id):
     """Generate full detail of transaction"""
     data = DATA["transaction_data"][DATA["transaction_data"]["transactionId"] == int(transaction_id)]
     if not len(data):
-        return JsonResponse({"data": "No records found"})
+        return JsonResponse({"summary": "No records found"})
 
     data = data[["transactionId", "productName", "transactionAmount", "transactionDatetime"]]
     data["transactionDatetime"] = data["transactionDatetime"].apply(lambda x: x.strftime("%Y-%m-%d %H:%M:%S"))
-    return JsonResponse({"data": data.to_dict(orient="records")})
+    return JsonResponse({"summary": data.to_dict(orient="records")})
 
 
 def transaction_summary_by_product(request, last_n_days):
