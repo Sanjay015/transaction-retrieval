@@ -9,5 +9,8 @@ PROCESSED_FOLDER_NAME = "processed"
 REFERENCE_DATA_FILE = "data/reference/reference.csv"
 # Transaction data datetime column
 TRANS_DATE_COL = "transactionDatetime"
+# Total expected columns in transaction data after merging with reference file
+TOTAL_COLS = ["transactionId", "productId", "transactionAmount", "transactionDatetime",
+              "productName", "productManufacturingCity"]
 # Data load URL pattern
 DATA_LOAD_URL_PATTERN = "transaction/load_data/"

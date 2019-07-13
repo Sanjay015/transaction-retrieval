@@ -58,6 +58,11 @@ def transaction_data(request):
             logger.warning("File: {} is an empty file".format(trans_file))
         move_transaction_file(trans_file)
         logger.debug("Moved file from : {} to processed location".format(trans_file))
+
+    # If data files are not available, lets create empty data frame
+    if "transaction_data" not in DATA:
+        DATA["transaction_data"] = pd.DataFrame(columns=config.TOTAL_COLS)
+
     return JsonResponse({"status": "Data loaded successfully"})
 
 
