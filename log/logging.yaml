@@ -1,0 +1,56 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+    apploger:
+        format: "%(asctime)s - %(levelname)s - %(process)s -%(thread)s - %(message)s"
+handlers:
+    console:
+        level: DEBUG
+        class: logging.StreamHandler
+        formatter: apploger
+    log_debug:
+        level: DEBUG
+        class: logging.handlers.TimedRotatingFileHandler
+        log_dir: applog
+        filename: log.DEBUG.log
+        when: midnight
+        backupCount: 30
+        formatter: apploger
+    log_error:
+        level: ERROR
+        class: logging.handlers.TimedRotatingFileHandler
+        log_dir: applog
+        filename: log.ERROR.log
+        when: midnight
+        backupCount: 30
+        formatter: apploger
+    log_info:
+        level: INFO
+        class: logging.handlers.TimedRotatingFileHandler
+        log_dir: applog
+        filename: log.INFO.log
+        when: midnight
+        backupCount: 30
+        formatter: apploger
+loggers:
+    '':
+        handlers:
+            - console
+        level: DEBUG
+        propagate: True
+    watcher:
+        handlers:
+            - console
+            - log_debug
+            - log_info
+            - log_error
+        level: DEBUG
+        propagate: False
+    app:
+        handlers:
+            - console
+            - log_debug
+            - log_info
+            - log_error
+        level: DEBUG
+        propagate: False
