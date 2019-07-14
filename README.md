@@ -18,6 +18,7 @@ Transaction Retrieval System
   - `pandas 0.23.4` or above
   - `requests 2.19.1` or above
   - `watchdog`
+  - You can use [requirements.txt](requirements.txt) to install dependencies
   - Web browser (example- `Chrome`, `Firefox`)
 - __Modules__
   - Transaction Application
