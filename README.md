@@ -51,7 +51,7 @@ Transaction Retrieval System
     - `python manage.py makemigrations`
     - `python manage.py migrate`
   - Common configurations are stored in `config.py`. Please feel free to modify as per your interest
-  - Start Random Data Generator Module
+  - **Start Random Data Generator Module**
     - Run this application if you want to generate random data
     - Run `python random_data_generator.py`
       - Command Line Arguments
@@ -60,7 +60,7 @@ Transaction Retrieval System
         - Example- `python random_data_generator.py -f 10` or `python random_data_generator.py --frequency=20`
     - This will keep running will keep generating random transaction data at given interval
     - Logs will be stored in folder `applog/random_data_generator/`
-  - Start Transaction Application
+  - **Start Transaction Application**
     - Open a `new command prompt` and run below command
     - `python manage.py runserver`
     - Now transaction application is running at `http://127.0.0.1:8000`
@@ -73,7 +73,7 @@ Transaction Retrieval System
       - `/transaction/transactionSummaryByManufacturingCity/{last_n_days}/` to get transaction summary
         by Products Manufacturing City in `{last_n_days}` from current date
     - Logs will be stored in folder `applog/app/`
-  - Start Transaction Data Watcher
+  - **Start Transaction Data Watcher**
     - Open a `new command prompt` and run below command
     - Run `python monitor.py`
     - Command Line Arguments
