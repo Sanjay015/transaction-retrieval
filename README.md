@@ -7,7 +7,7 @@ Transaction Retrieval System
   - Once a new transaction data file gets dumped at the data location, application will automatically load the changed data in memory
   - User will be always able to see updated transaction records
   - There are `four` urls from where user can see the transaction summary
-    - To load and cahce transaction data: `/transaction/transactionSummary/{transaction_id}/`
+    - To load and cahce transaction data: `/transaction/load_data`
     - By transaction ID available at: `/transaction/transactionSummary/{transaction_id}/`
     - By `Products` in last `n days` from current date is available at: `/transaction/transactionSummaryByProducts/{last_n_days}/`
     - By `Product Manufacturing City` in last `n days` from current date is available at: `/transaction/transactionSummaryByManufacturingCity/{last_n_days}/`
