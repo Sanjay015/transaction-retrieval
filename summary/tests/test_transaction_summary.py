@@ -1,4 +1,3 @@
-# from django.test import TestCase
 import json
 import pandas as pd
 import datetime
@@ -10,11 +9,6 @@ from unittest import TestCase, mock
 class TestTransactionSummaryView(TestCase):
     def setUp(self) -> None:
         self.client = Client()
-        # patch `utils.utils.transaction_files`
-        self.transaction_files_patch = mock.patch("utils.utils.transaction_files")
-        self.mock_files_patcher = self.transaction_files_patch.start()
-        self.mock_files_patcher.return_value = []
-
         # Dummy data
         self.dummy_data = {
             "transactionId": [1, 2, 3, 4, 5],
@@ -32,9 +26,6 @@ class TestTransactionSummaryView(TestCase):
         }
 
         self.mock_data = {"transaction_data": pd.DataFrame(data=self.dummy_data)}
-
-    def tearDown(self) -> None:
-        self.mock_files_patcher.stop()
 
     @staticmethod
     def replace_time_stamp(data):
