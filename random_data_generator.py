@@ -16,7 +16,7 @@ from log.logger import setup_logger
 logger = logging.getLogger("random_data_generator")
 
 
-class GenerateRandomData(object):
+class RandomDataGenerator(object):
 
     def __init__(self, frequency=60):
         self.frequency = frequency
@@ -123,5 +123,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     logging.info("Random transaction data generator is running")
-    random_data_generator = GenerateRandomData(frequency=args.frequency)
+    random_data_generator = RandomDataGenerator(frequency=args.frequency)
     random_data_generator.start()
