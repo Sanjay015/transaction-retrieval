@@ -1,10 +1,10 @@
 import datetime
-from django.http import JsonResponse
 import logging
 import os
+import config
 import pandas as pd
 
-from utils import config
+from django.http import JsonResponse
 from utils.utils import transaction_files, move_transaction_file, get_root
 
 logger = logging.getLogger("app")

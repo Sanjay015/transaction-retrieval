@@ -1,7 +1,7 @@
-"""Utility module"""
 import os
-from utils import config
 import shutil
+
+import config
 
 
 def get_root() -> str:

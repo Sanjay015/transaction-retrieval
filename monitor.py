@@ -7,7 +7,7 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 
-from utils.config import DATA_LOAD_URL_PATTERN
+from config import DATA_LOAD_URL_PATTERN
 from utils.utils import get_root
 from log.logger import setup_logger
 
