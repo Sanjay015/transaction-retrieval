@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^transactionSummary/(?P<transaction_id>[0-9]+)/$',
         views.transaction_summary, name='transaction-summary'),
 
-        url(r'^transactionSummaryByProducts/(?P<last_n_days>[0-9]+)/$',
+    url(r'^transactionSummaryByProducts/(?P<last_n_days>[0-9]+)/$',
         views.transaction_summary_by_product, name='transaction-summary-by-product'),
 
     url(r'^transactionSummaryByManufacturingCity/(?P<last_n_days>[0-9]+)/$',
