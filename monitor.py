@@ -17,11 +17,11 @@ logger = logging.getLogger("watcher")
 class DataWatchHandler(PatternMatchingEventHandler):
     patterns = ["*.csv"]
 
-    def __init__(self, host="localhost", port=8000, url=None):
+    def __init__(self, host="localhost", port=8000):
         super().__init__()
         self.host = host
         self.port = port
-        self.url = "http://{}:{}/{}".format(self.host, self.port, DATA_LOAD_URL_PATTERN) if not url else url
+        self.url = "http://{}:{}/{}".format(self.host, self.port, DATA_LOAD_URL_PATTERN)
 
     def process(self, event):
         """
@@ -54,13 +54,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Command Line Argument parser')
     parser.add_argument('--host', default="localhost", type=str, help='Application host')
     parser.add_argument('-p', '--port', default=8000, type=int, help='Application port')
-    parser.add_argument('-u', '--url', default=None, type=str, help='Application full URL')
     args = parser.parse_args()
 
     observer = Observer()
     # Schedule the watcher
-    observer.schedule(DataWatchHandler(host=args.host, port=args.port, url=args.url),
-                      path=os.path.join(get_root(), "data"))
+    observer.schedule(DataWatchHandler(host=args.host, port=args.port), path=os.path.join(get_root(), "data"))
+
     # Starting data file watcher
     observer.start()
 
