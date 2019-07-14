@@ -81,7 +81,7 @@ Transaction Retrieval System
       - `-p` or `--port` port on which transaction application is running. Default `8000`
       - Example `python monitor.py --host=127.0.0.1 --port=8080`
     - Logs will be stored in folder `applog/watcher/`
-- __Unite Test Coverage__
+- __Unit Test Coverage__
   - To run unittests, clone this repository
   - Navigate to the cloned repository
   - Open command prompt and run below commands in same order
