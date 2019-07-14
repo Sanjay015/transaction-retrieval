@@ -1,5 +1,6 @@
 from django.urls import path
 from django.conf.urls import url
+
 from . import views
 
 urlpatterns = [
@@ -17,5 +18,6 @@ urlpatterns = [
 
 # Load reference data on server startup
 views.load_reference_data()
+
 # Load transaction data on server startup
 views.transaction_data(None)
