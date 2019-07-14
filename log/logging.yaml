@@ -54,3 +54,11 @@ loggers:
             - log_error
         level: DEBUG
         propagate: False
+    random_data_generator:
+        handlers:
+            - console
+            - log_debug
+            - log_info
+            - log_error
+        level: DEBUG
+        propagate: False
