@@ -89,3 +89,9 @@ Transaction Retrieval System
     - `python manage.py makemigrations` (Run if you did not already ran this command)
     - `python manage.py migrate` (Run if you did not already ran this command)
     - `python manage.py test` To run the unittest tests coverage of the application
+
+- __Note: Recommendation__
+  - This application is build and tested in `conda` environment
+  - Used `python 3.7` in development
+  - Used `django's` in built test suite to run unittests
+  - Recommend to use run this application in `conda` environment with `python 3.7`
