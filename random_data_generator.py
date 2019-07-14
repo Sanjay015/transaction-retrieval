@@ -18,7 +18,7 @@ logger = logging.getLogger("random_data_generator")
 
 class RandomDataGenerator(object):
 
-    def __init__(self, frequency=60):
+    def __init__(self, frequency=120):
         self.frequency = frequency
         self.cities = ["C1", "C2", "C3", "C5", "C5"]
         self.products = ["P1", "P2", "P3", "P4", "P5"]
@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
     # Command Line Argument parser
     parser = argparse.ArgumentParser(description='Command Line Argument parser')
-    parser.add_argument('-f', '--frequency', default=60, type=int,
+    parser.add_argument('-f', '--frequency', default=120, type=int,
                         help='Frequency interval in seconds to generate random data')
     args = parser.parse_args()
 
