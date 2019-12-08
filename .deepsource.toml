@@ -1,7 +1,6 @@
-.idea/
-*.pyc
-*.sqlite3
-*.pdf
-*.log
-*.pdf
-applog/
+
+version = 1
+  [[analyzers]]
+  name = "python"
+  enabled = true
+  runtime_version = "3.x.x"
