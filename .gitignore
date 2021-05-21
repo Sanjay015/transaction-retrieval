@@ -1,0 +1,6 @@
+data/
+applog/
+__pycache__/
+*.pyc
+*.out
+*.sqlite3
